@@ -1,4 +1,4 @@
-# Module « À propos » — Ysdad 💙 — v1.1.0
+# Module « À propos » — Ysdad 💙 — v1.1.1
 
 Fenêtre « À propos » prête à l'emploi : nom de l'appli, version (lue toute seule), votre logo, « Conçu avec 💙 par Ysdad », 3 boutons courriel vers 4ysdad@gmail.com (Suggestion, Idée d'appli, Demande de devis), et un bouton **OK** pour fermer. Plus de X en haut.
 Couleurs graphite → bleu acier. Elle passe en clair ou en sombre toute seule, selon le thème de l'appli.
@@ -13,12 +13,11 @@ dependencies:
   ysdad_about:
     git:
       url: https://github.com/4YsDad/ysdad-module-a-propos.git
-      ref: v1.1.0
-  # ou sans ref pour suivre main :
-  #   ref: main
+      ref: main          # suit le module : `flutter pub upgrade ysdad_about` pour recevoir les changements
+  # ou figé sur une version : ref: v1.1.1
 ```
 Puis `flutter pub get`. Logo inclus dans le paquet : utilisez
-`logoAsset: 'packages/ysdad_about/assets/ysdad-logo.png'`
+`logoAsset: kYsdadAboutLogoPackageAsset` (= `'packages/ysdad_about/assets/ysdad-logo.png'`)
 ou laissez la valeur par défaut si vous avez aussi copié le logo dans `assets/` de l'appli.
 
 ### B. Copier 2 fichiers (comme avant)

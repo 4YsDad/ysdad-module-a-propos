@@ -1,4 +1,4 @@
-// ysdad_about.dart — popup « À propos » réutilisable (Ysdad) v1.1.0
+// ysdad_about.dart — popup « À propos » réutilisable (Ysdad) v1.1.1
 // Couleurs Ysdad : graphite #374151 → bleu acier #4682B4 · thème clair/sombre automatique
 // Dépendances : package_info_plus, url_launcher, shared_preferences ; asset assets/ysdad-logo.png
 import 'package:flutter/material.dart';
@@ -7,6 +7,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 const _email = '4ysdad@gmail.com';
+
+/// Logo Ysdad inclus dans le paquet `ysdad_about` (dépendance Git) :
+/// `YsdadAboutTile(appName: ..., logoAsset: kYsdadAboutLogoPackageAsset)`.
+const kYsdadAboutLogoPackageAsset = 'packages/ysdad_about/assets/ysdad-logo.png';
 
 /// Clé SharedPreferences pour « Ne plus afficher au démarrage ».
 const kYsdadAboutNePlusAfficher = 'ysdad.apropos.ne_plus_afficher';
@@ -32,7 +36,13 @@ class YsdadAboutTile extends StatelessWidget {
         title: const Text('À propos'),
         onTap: () {
           final nav = Navigator.of(context);
-          Scaffold.maybeOf(context)?.closeDrawer();
+          // Ferme le menu, qu'il soit à gauche (drawer) ou à droite (endDrawer).
+          final scaffold = Scaffold.maybeOf(context);
+          if (scaffold?.isEndDrawerOpen ?? false) {
+            scaffold!.closeEndDrawer();
+          } else {
+            scaffold?.closeDrawer();
+          }
           showYsdadAbout(
             nav.context,
             appName: appName,

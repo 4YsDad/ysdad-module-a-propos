@@ -1,6 +1,6 @@
 name: ysdad_about
 description: "Module Ysdad « À propos » : popup réutilisable (invitation, courriels, case « Ne plus afficher », bouton OK)."
-version: 1.1.0
+version: 1.1.1
 publish_to: none
 repository: https://github.com/4YsDad/ysdad-module-a-propos
 

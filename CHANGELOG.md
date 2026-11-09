@@ -1,3 +1,7 @@
+## 1.1.1
+- `YsdadAboutTile` ferme aussi un menu de droite (`endDrawer`), pas seulement le `drawer` de gauche.
+- Constante `kYsdadAboutLogoPackageAsset` pour le logo inclus dans le paquet.
+
 ## 1.1.0
 - Bouton **OK** en bas du popup pour le fermer (sous la case « Ne plus afficher » quand elle est visible).
 - Retrait du **X** en haut à droite.
