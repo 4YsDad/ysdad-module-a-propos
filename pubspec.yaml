@@ -1,0 +1,25 @@
+name: ysdad_about
+description: "Module Ysdad « À propos » : popup réutilisable (invitation, courriels, case « Ne plus afficher », bouton OK)."
+version: 1.1.0
+publish_to: none
+repository: https://github.com/4YsDad/ysdad-module-a-propos
+
+environment:
+  sdk: ^3.13.7
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  package_info_plus: ^10.0.0
+  url_launcher: ^6.3.0
+  shared_preferences: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/ysdad-logo.png
